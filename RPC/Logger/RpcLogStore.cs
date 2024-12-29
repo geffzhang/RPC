@@ -21,11 +21,6 @@ namespace RPC.Logger
                             OnLog += new ConsoleRpcLogProvider().OnLog;
                             break;
                         }
-                    case RpcLogProvider.AliCloudSLS:
-                        {
-                            OnLog += new AliCloudSlsRpcLogProvider(child.GetSection("Configuration")).OnLog;
-                            break;
-                        }
                 }                
             }                     
         }

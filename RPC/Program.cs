@@ -23,11 +23,6 @@ builder.Host.ConfigureAppConfiguration(configuration => {
     {
         configuration.AddUserSecrets(secret,true);
     }
-    var nacos = builder.Configuration.GetSection("NACOS");
-    if (nacos.Exists())
-    {
-        configuration.AddNacosV2Configuration(nacos);
-    }
 });
 
 builder.Host.ConfigureServices(services => {
